@@ -1,0 +1,1 @@
+// File exists only to link ctest as library 
