@@ -60,7 +60,7 @@ static bool ctest__assert(bool result, const char *expression, const char *file,
     }
     else
     {
-        fprintf(stderr, "❌ %s:%d -> %s\n💡 Assertion of '%s' failed: ", file, line, test_name, expression);
+        fprintf(stderr, "❌ %s:%d -> %s\n💬 Assertion of '%s' failed\n📝 ", file, line, test_name, expression);
         va_list args;
         va_start(args, msg);
         vfprintf(stderr, msg, args);
@@ -91,7 +91,7 @@ static bool ctest__run_tests()
     failed_assertions = test_##name();                                                                                 \
     if (failed_assertions > 0)                                                                                         \
     {                                                                                                                  \
-        fprintf(stderr, "❌ Test " CTEST_GRYB "%s" CTEST_GRY " failed %d assertions!\n", #name, failed_assertions);    \
+        fprintf(stderr, "💥 Test " CTEST_GRYB "%s" CTEST_GRY " failed %d assertions!\n", #name, failed_assertions);    \
         fail_test_count++;                                                                                             \
     }                                                                                                                  \
     else                                                                                                               \
