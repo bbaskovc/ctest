@@ -1,2 +1,3 @@
-# ctest
-Useful macros to run ctest tests.
+# CTEST
+
+Defines environment-specific macros for configuring CTest behavior.
